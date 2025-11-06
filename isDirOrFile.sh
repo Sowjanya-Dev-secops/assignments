@@ -1,6 +1,6 @@
 #!bin/bash
 File_path=$1
-if [ -z "$File_path" ]; then
+if [ ! -z "$File_path" ]; then
     if [ -f "$File_path" ]; then
         echo " it is a file"
         if [ -r "$File_path" ]; then
