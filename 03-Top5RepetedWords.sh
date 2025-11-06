@@ -24,4 +24,4 @@ tr A-Z a-z|
 sort |
 uniq -c |
 sort -nr |
-top -5
+head -5
