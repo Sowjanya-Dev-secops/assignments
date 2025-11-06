@@ -23,5 +23,5 @@ tr -cd '[:alnum:]\n' |
 tr A-Z a-z|
 sort |
 uniq -c |
-sort nr |
+sort -nr |
 top -5
