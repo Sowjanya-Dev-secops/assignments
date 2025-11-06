@@ -11,7 +11,7 @@ if [ ! -z "$File_path" ]; then
             echo "don't have permisssion to write and readable"
         fi
     fi
-    if [ - "$File_path" ]; then
+    if [ -d "$File_path" ]; then
         echo "It is a directory"
         ls -l $File_path
     fi
