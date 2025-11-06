@@ -13,6 +13,7 @@ if [ -z "$File_path" ]; then
     if [ - "$File_path" ]; then
         echo "It is a directory"
         ls -l $File_path
+    fi
 
 else
     echo "file path is not exist"
