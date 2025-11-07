@@ -9,6 +9,12 @@ fi
 find $file_path -type f -name "*.conf" -print0 |
 while IFS= read -r line;
 do
-    sed -i s/$String1/$String2/g "$line"
+    sed -i "s/$String1/$String2/g" "$line"
     echo "Updated file $file_path"
 done
+
+# find "$file_path" -type f -name "*.conf" |
+# while IFS= read -r line; do
+#     sed -i "s/$String1/$String2/g" "$line"
+#     echo "Updated file: $line"
+# done
