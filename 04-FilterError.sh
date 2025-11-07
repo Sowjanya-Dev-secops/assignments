@@ -14,6 +14,8 @@ fi
 while IFS= read -r line;
 do
     if echo "$line" |grep -q 'ERROR';then
-        echo "$line" >> $destination_path
+        echo "$line" >> "$destination_path"
     fi
 done <<< "$source_path"
+
+echo "Filtering complete. Output saved to $destnation_path"
