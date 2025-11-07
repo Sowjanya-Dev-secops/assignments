@@ -1,6 +1,6 @@
 #!/bin/bash
-source_path=$1
-destination_path=$2
+source_path="$1"
+destination_path="$2"
 if [ $# -lt 2 ]; then
     echo "ERROR:: usage:$0 <source file > <Destination file> "
     exit 1
@@ -16,6 +16,6 @@ do
     if echo "$line" |grep -q 'ERROR';then
         echo "$line" >> "$destination_path"
     fi
-done <<< "$source_path"
+done < "$source_path"
 
-echo "Filtering complete. Output saved to $destnation_path"
+echo "Filtering complete. Output saved to $destination_path"
