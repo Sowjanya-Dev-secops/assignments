@@ -6,8 +6,8 @@ if [ ! -d "$file_path" ]; then
     echo "ERROR:: directory  does not exist "
     exit 1
 fi
-find $file_path -type f -name "*.conf" -print0 |
-while IFS= read -r line;
+find "$file_path" -type f -name "*.conf" -print0 |
+while IFS= read -r -d '' line;
 do
     sed -i "s/$String1/$String2/g" "$line"
     echo "Updated file $line"
