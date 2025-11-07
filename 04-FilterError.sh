@@ -11,7 +11,7 @@ if [ ! -f $source_path ]; then
     exit 1
 fi
 
-while IFS = read r line
+while IFS= read -r line;
 do
     if echo "$line" |grep -q 'ERROR';then
         echo "$line" >> $destination_path
