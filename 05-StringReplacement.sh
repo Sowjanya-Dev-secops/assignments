@@ -2,13 +2,13 @@
 file_path="$1"
 String1="FOO"
 String2="BAR"
-if [ ! -f "$file_path" ]; then
-    echo "ERROR:: file does not exist "
+if [ ! -d "$file_path" ]; then
+    echo "ERROR:: directory  does not exist "
     exit 1
 fi
-find $file_path -type f -name "*.conf" |
+find $file_path -type f -name "*.conf" -print0 |
 while IFS= read -r line;
 do
-    sed -i 's/$String1/$String2/g' "$line"
-    echo "Updated file $filepath"
+    sed -i s/$String1/$String2/g "$line"
+    echo "Updated file $file_path"
 done
