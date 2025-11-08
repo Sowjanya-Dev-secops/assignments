@@ -10,7 +10,7 @@ fi
 a=0
 b=1
 
-echo ""fibonaci sereies:"
+echo "fibonaci sereies:"
 for (( i=0 ; i<=$Number_of_term; i++ ));
 do
     echo -n "$a "
