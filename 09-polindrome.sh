@@ -1,5 +1,5 @@
 #!/bin/bash
-read -r "enter the string : " string
+read -p "enter the string : " string
 if [ -z "$string" ]; then
     echo "USAGE: $0 <please enter the string "
     exit 1
